@@ -19,7 +19,7 @@ function FloatingGeometry({ position, color }: { position: [number, number, numb
 
   return (
     <mesh ref={meshRef} position={position} geometry={geometry}>
-      <meshStandardMaterial color={color} transparent opacity={0.3} />
+      <meshStandardMaterial args={[{ color, transparent: true, opacity: 0.3 }]} />
     </mesh>
   )
 }

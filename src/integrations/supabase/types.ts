@@ -44,6 +44,47 @@ export type Database = {
         }
         Relationships: []
       }
+      email_queue: {
+        Row: {
+          contact_id: string | null
+          created_at: string | null
+          id: string
+          message: string
+          processed_at: string | null
+          recipient: string
+          status: string | null
+          subject: string
+        }
+        Insert: {
+          contact_id?: string | null
+          created_at?: string | null
+          id?: string
+          message: string
+          processed_at?: string | null
+          recipient: string
+          status?: string | null
+          subject: string
+        }
+        Update: {
+          contact_id?: string | null
+          created_at?: string | null
+          id?: string
+          message?: string
+          processed_at?: string | null
+          recipient?: string
+          status?: string | null
+          subject?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "email_queue_contact_id_fkey"
+            columns: ["contact_id"]
+            isOneToOne: false
+            referencedRelation: "contact_submissions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never

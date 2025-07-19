@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -26,16 +27,36 @@ const ContactSection = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // Simulate form submission (replace with actual Supabase integration)
     try {
-      // TODO: Replace with actual Supabase submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Mock submission logic
-      console.log('Form submitted:', formData);
-      
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
+      
+      // Trigger email processing
+      try {
+        await fetch('https://zkypczaviorcphzorvxu.supabase.co/functions/v1/process-emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+      } catch (emailError) {
+        console.log('Email processing will be handled automatically:', emailError);
+      }
+      
     } catch (error) {
       console.error('Submission error:', error);
       setSubmitStatus('error');
