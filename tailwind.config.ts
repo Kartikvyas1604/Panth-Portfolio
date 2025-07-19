@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +64,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom Brand Colors
+				'rich-black': 'hsl(var(--rich-black))',
+				'indigo-primary': 'hsl(var(--indigo-primary))',
+				'amber-accent': 'hsl(var(--amber-accent))',
+				'purple-secondary': 'hsl(var(--purple-secondary))',
+				'neutral': {
+					50: 'hsl(var(--neutral-50))',
+					100: 'hsl(var(--neutral-100))',
+					200: 'hsl(var(--neutral-200))',
+					800: 'hsl(var(--neutral-800))',
 				}
+			},
+			boxShadow: {
+				'elegant': 'var(--shadow-elegant)',
+				'hover': 'var(--shadow-hover)',
+				'glow': 'var(--shadow-glow)',
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-mesh': 'var(--gradient-mesh)',
+				'gradient-subtle': 'var(--gradient-subtle)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
