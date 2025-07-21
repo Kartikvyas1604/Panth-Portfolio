@@ -44,9 +44,9 @@ const SocialSection = () => {
         </svg>
       ),
       color: 'hover:text-blue-700',
-      description: 'Professional Network'
-    },
-    {
+      description: 'Network'
+        },
+        {
       name: 'Instagram',
       url: 'https://instagram.com/panthbhatt.design',
       icon: (
