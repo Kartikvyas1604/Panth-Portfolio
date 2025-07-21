@@ -14,7 +14,7 @@ BEGIN
     status
   ) VALUES (
     NEW.id,
-    'panth.bhatt@example.com',
+    'panthbhatt7654321@gmail.com',
     'New Portfolio Contact: ' || NEW.name,
     'Name: ' || NEW.name || E'\n' ||
     'Email: ' || NEW.email || E'\n' ||

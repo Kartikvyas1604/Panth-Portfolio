@@ -28,19 +28,7 @@ const Footer = () => {
             <div className="flex items-center justify-center gap-2 text-white/80">
               <span>© 2025 Panth Bhatt</span>
             </div>
-            
-            <div className="flex items-center justify-center gap-2 text-white/60">
-              <span>Crafted with</span>
-              <Heart className="w-4 h-4 text-red-400 fill-current" />
-              <span>& code</span>
-            </div>
-
-            {/* Tech Stack */}
-            <div className="text-sm text-white/40">
-              Built with React, TailwindCSS & TypeScript
-            </div>
           </div>
-        </div>
 
         {/* Bottom Border */}
         <div className="mt-8 pt-6 border-t border-white/10">
@@ -81,6 +69,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </footer>

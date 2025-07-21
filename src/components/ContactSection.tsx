@@ -184,10 +184,10 @@ const ContactSection = () => {
               Prefer to email directly?
             </p>
             <a 
-              href="mailto:panth.bhatt@example.com"
+              href="mailto:panthbhatt7654321@gmail.com"
               className="text-primary hover:text-accent transition-colors font-medium underline decoration-2 underline-offset-4"
             >
-              panth.bhatt@example.com
+              panthbhatt7654321@gmail.com
             </a>
           </div>
         </div>

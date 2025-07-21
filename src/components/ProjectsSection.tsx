@@ -1,7 +1,7 @@
 import { ExternalLink, Github, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import ecommerceProject from '@/assets/project-ecommerce.jpg';
+import Scollfund from '@/assets/Scroll-Fund.png';
 import mobileAppProject from '@/assets/project-mobile-app.jpg';
 import saasProject from '@/assets/project-saas.jpg';
 
@@ -9,13 +9,13 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Dashboard',
-      description: 'Clean admin interface with data visualization and analytics',
-      image: ecommerceProject,
-      tech: ['React', 'TailwindCSS', 'Chart.js', 'TypeScript'],
+      title: 'Scroll Fund',
+      description: 'A decentralized platform for creating on-chain profiles and receiving cryptocurrency donations, similar to Buy Me a Coffee but built on blockchain technology',
+      image: Scollfund,
+      tech: ['React', 'TailwindCSS', 'Solidity', 'TypeScript'],
       links: {
-        live: 'https://demo.example.com',
-        github: 'https://github.com/panth/ecommerce-dashboard',
+        live: 'https://scrollfund.vercel.app/',
+        github: 'https://github.com/Kartikvyas1604/Scroll-Fund',
         case: '#'
       }
     },
