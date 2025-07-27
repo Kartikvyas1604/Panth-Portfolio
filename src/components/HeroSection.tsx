@@ -14,10 +14,9 @@ const HeroSection = () => {
   };
 
   const downloadCV = () => {
-    // Create a mock CV download - in real implementation, this would download actual PDF
     const link = document.createElement('a');
-    link.href = '#'; // Replace with actual CV URL
-    link.download = 'Panth_Bhatt_CV.pdf';
+    link.href = 'https://drive.google.com/uc?export=download&id=1ZJeLi80rwf6ujPenH4n1EyKzJnQOwcgW';
+    link.download = 'PanthBhatt_CV.pdf';
     link.click();
   };
 
