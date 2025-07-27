@@ -15,7 +15,7 @@ const HeroSection = () => {
 
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=11LR-SPHBPsibWtfDAM3zyVDMLs8LkKbf';
+    link.href = 'https://drive.google.com/uc?export=download&id=1ZJeLi80rwf6ujPenH4n1EyKzJnQOwcgW';
     link.download = 'PanthBhatt_CV.pdf';
     link.click();
   };
